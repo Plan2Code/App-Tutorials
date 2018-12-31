@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Our First App</title>
+
+    <style media="screen">
+
+      #info {
+
+        font-size: 30px;
+
+      }
+
+      #display {
+
+        font-family: fantasy, serif;
+        font-size: 30px;
+
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <textarea id="info" rows="8" cols="50"></textarea>
+
+    <p id="display"></p>
+
+    <script type="text/javascript">
+
+      const info = document.getElementById("info");
+      const display = document.getElementById("display");
+
+      info.oninput = function () {
+
+        display.textContent = info.value;
+
+      }
+
+    </script>
+  </body>
+</html>

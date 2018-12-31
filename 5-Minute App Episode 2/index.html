@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>5 Minute App: Episode Two</title>
+
+    <style media="screen">
+
+      #wrapper {
+
+        text-align: center;
+
+      }
+
+      #box {
+
+        font-size: 30px;
+        border: 20px blue solid;
+        border-radius: 20px;
+        
+      }
+
+      #reporter {
+
+        font-size: 30px;
+        font-family: sans-serif;
+
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+    <section id="wrapper">
+
+      <textarea id="box" rows="8" cols="50"></textarea>
+
+      <p id="reporter"></p>
+
+    </section>
+
+    <script type="text/javascript">
+
+      const box = document.getElementById("box");
+      const reporter = document.getElementById("reporter");
+
+      box.oninput = function () {
+
+        if (box.value.length == 1) {
+
+          reporter.textContent = `You have typed ${box.value.length} character.`;
+
+        } else {
+
+          reporter.textContent = `You have typed ${box.value.length} characters.`;
+
+        }
+
+
+      }
+
+    </script>
+
+  </body>
+</html>
